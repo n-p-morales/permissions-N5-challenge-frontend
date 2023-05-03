@@ -30,28 +30,28 @@ const updatePermissionsService = async (data, onSuccessCallback, onErrorCallback
 
 const getPermissionsTypeServices = async (Id, onSuccessCallback, onErrorCallback) => {
     await ApiRequestFactory
-        .get(`/Permissions/GetPermissionsType?Id=${Id}`)
+        .get(`/PermissionsType/GetPermissionsType?Id=${Id}`)
         .then((response) => onSuccessCallback(response))
         .catch((error) => onErrorCallback(error));
 };
 
 const getPermissionsTypeByIdServices = async (Id, onSuccessCallback, onErrorCallback) => {
     await ApiRequestFactory
-        .get(`/Permissions/GetPermissionsTypeById?Id=${Id}`)
+        .get(`/PermissionsType/GetPermissionsTypeById?Id=${Id}`)
         .then((response) => onSuccessCallback(response))
         .catch((error) => onErrorCallback(error));
 };
 
 const createPermissionsTypeService = async (data, onSuccessCallback, onErrorCallback) => {
     await ApiRequestFactory
-        .post('/Permissions/CreatePermissionsType', data)
+        .post('/PermissionsType/CreatePermissionsType', data)
         .then((response) => onSuccessCallback(response))
         .catch((error) => onErrorCallback(error));
 };
 
 const updatePermissionsTypeService = async (data, onSuccessCallback, onErrorCallback) => {
     await ApiRequestFactory
-        .post('/Permissions/UpdatePermissionsType', data)
+        .post('/PermissionsType/UpdatePermissionsType', data)
         .then((response) => onSuccessCallback(response))
         .catch((error) => onErrorCallback(error));
 };
